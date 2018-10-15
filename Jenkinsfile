@@ -11,5 +11,10 @@ pipeline {
         sh 'dotnet restore'
       }
     }
+    stage('build') {
+      steps {
+        sh 'dotnet build'
+      }
+    }
   }
 }
