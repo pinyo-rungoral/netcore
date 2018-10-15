@@ -6,12 +6,12 @@ pipeline {
 
   }
   stages {
-    stage('build') {
+    stage('Restore Nuget') {
       steps {
         sh 'dotnet restore'
       }
     }
-    stage('build') {
+    stage('Build') {
       steps {
         sh 'dotnet build'
       }
