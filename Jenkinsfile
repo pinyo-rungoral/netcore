@@ -6,15 +6,16 @@ pipeline {
 
   }
   stages {
-    stage('Restore Nuget') {
-      steps {
-        sh 'dotnet restore'
-      }
-    }
     stage('Build') {
       steps {
+        sh 'dotnet restore'
         sh 'dotnet build'
       }
-    }
+    }    
+    stage('Test') {
+      steps {
+        echo 'dotnet test'
+        }
+      }
   }
 }
