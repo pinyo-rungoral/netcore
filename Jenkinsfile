@@ -11,7 +11,7 @@ pipeline {
         sh 'dotnet restore'
         sh 'dotnet build --no-restore'   
         sh 'cd CoreApp.Web/bin/Debug/netcoreapp2.1 && ls'
-         archiveArtifacts artifacts: './CoreApp.Web/bin/Debug/netcoreapp2.1/*.dll', fingerprint: true
+        archiveArtifacts artifacts: './CoreApp.Web/bin/Debug/netcoreapp2.1/*.dll', fingerprint: true
       }
     }    
     stage('Test') {
