@@ -24,7 +24,7 @@ pipeline {
   }
   post {
     always {
-        archiveArtifacts artifacts: './CoreApp.Web/bin', fingerprint: true
+        archiveArtifacts artifacts: './CoreApp.Web/bin/**/*.*', fingerprint: true
     }
   }
 }
