@@ -18,4 +18,9 @@ pipeline {
         }
       }
   }
+  post {
+    always {
+        archiveArtifacts artifacts: './CoreApp.Web/bin', fingerprint: true
+    }
+  }
 }
