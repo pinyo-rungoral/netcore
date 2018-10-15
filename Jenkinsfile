@@ -9,8 +9,8 @@ pipeline {
     stage('Build') {
       steps {
         sh 'dotnet restore'
-        sh 'dotnet build'
-        zip zipFile: 'bin.zip', archive: false, dir: 'coreApp.Web/bin/'
+        sh 'dotnet build'     
+        zip zipFile: 'bin.zip', archive: false, dir: './coreApp.Web/bin'
       }
     }    
     stage('Test') {
