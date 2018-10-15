@@ -10,8 +10,10 @@ pipeline {
       steps {
         sh 'dotnet restore'
         sh 'dotnet build'   
-        sh 'cd coreApp.Web/bin && ls'
-       
+        sh 'cd CoreApp.Web/bin/Debug/netcoreapp2.1 && ls'
+        script{
+          zip archive: true, dir: './CoreApp.Web/bin/Debug/netcoreapp2.1', glob: '', zipFile: 'debug.zip'
+        }
       }
     }    
     stage('Test') {
