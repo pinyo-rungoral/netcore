@@ -24,7 +24,7 @@ pipeline {
   }
   post {
     always {
-        archiveArtifacts artifacts: '././CoreApp.Web/bin/Debug/netcoreapp2.1/*.*', fingerprint: true
+        archiveArtifacts artifacts: './CoreApp.Web/bin/Debug/netcoreapp2.1/*.*', fingerprint: true
     }
   }
 }
