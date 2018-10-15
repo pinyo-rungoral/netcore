@@ -18,7 +18,7 @@ pipeline {
     }    
     stage('Test') {
       steps {
-        sh 'dotnet test --no-build --no-restore'
+        sh 'dotnet test CoreApp.Tests/CoreApp.Tests.csproj --no-build --no-restore'
         }
       }
   }
